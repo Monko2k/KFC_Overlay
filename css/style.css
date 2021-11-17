@@ -1,0 +1,321 @@
+@font-face {
+    font-family: "Sen-Bold";
+    src: url("../fonts/Sen-Bold.ttf");
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+body,html{
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+}
+#main{
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+}
+
+#header {
+	position: absolute;
+    width: 1920px;
+    height: 150px;
+    opacity: 100%;
+    transition: ease-in-out 500ms;
+	z-index: 1;
+	background-size: cover;
+	background-image: url('../static/header.png');
+	font-family: Sen-Bold;
+    font-weight: normal;
+	font-size: 26px;
+	color:black;
+	
+
+}
+
+#blueName {
+	position: absolute;
+	left: 150px;
+	top: 78px;
+    transition: ease-in-out 500ms;
+    text-align: center;
+}
+
+#redName {
+	position: absolute;
+	right: 150px;
+	top: 78px;
+	text-align: right;
+    transition: ease-in-out 500ms;
+    text-align: center;
+}
+
+
+#footerLobby {
+	position: absolute;
+	bottom: 0px;
+    width: 1920px;
+    height: 210px;
+    transition: ease-in-out 200ms;
+	background-image: url('../static/footer_lobby.png');
+
+}
+
+#footerGameplay {
+	position: absolute;
+	bottom: 0px;
+    width: 1920px;
+    height: 210px;
+    transition: ease-in-out 200ms;
+	font-size: 36px;
+	font-family: Montserrat-Regular;
+	color: black;
+	background-image: url('../static/footer_gameplay.png');
+	z-index: 10;
+
+}
+
+#blueScore {
+	position: absolute;
+	left: 584px;
+	bottom: 134px;
+}
+#redScore {
+	position: absolute;
+	right: 584px;
+	bottom: 134px;
+}
+
+#mapContainer {
+	position: relative;
+	left: 2px;
+	top: 51px;
+	width: 471px;
+	height: 95px;
+	background-color: black;
+    background-size: cover;
+	z-index: -1;
+	color: white;
+	font-family: Sen-Bold;
+
+}
+
+#overlay {
+	position: relative;
+	height: 95px;
+	width: 471px;
+	z-index: 0;
+    background-color: rgba(0,0,0,0.50);
+}
+
+#mapTitle {
+	padding-top: 12px;
+	font-size: 26px;
+	position: relative;
+	padding-left: 11px;
+	width: 95%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	z-index: 0;
+}
+
+#mapDifficulty {
+	position: relative;
+	padding-left: 11px;
+	padding-top: 6px;
+
+	width: 95%;
+	font-size: 22px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	z-index: 0;
+}
+#chats {
+	background:black;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 800px;
+	height: 183px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 5px 15px;
+	font-size: 18px;
+    font-family: Sen-Bold;
+    transition: ease-in-out 500ms;
+	z-index: -1;
+	color: white;
+}
+
+.chat {
+	display: flex;
+	text-align: left;
+}
+
+.chatTime {
+	width: 5%;
+	color: silver;
+	padding-right: 10px;
+}
+.wholeChat {
+	width: 95%;
+	display: flex;
+}
+.chatName {
+	color: white;
+	white-space: nowrap;
+	width: max-content;
+}
+.chatText {
+	white-space: normal;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.unknown {
+	color: yellow;
+}
+.bot {
+	color: #FF66AA;
+}
+.right {
+	color: #1871d9;
+}
+.left {
+	color: #f03030;
+}
+
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+	width: 0px;
+	visibility: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    margin-top: 25px;
+    margin-bottom: 25px;
+	visibility: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: grey;
+	border-radius: 10px;
+}
+.text{
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+	z-index: 100;
+	width: 18px;
+	height: 18px;
+	background-image: url('../static/score_point.png');
+	color: black;
+	margin-left: 4px;
+	margin-right: 4px;
+	opacity: 0.25;
+	transition: 500ms;
+
+}
+
+#blueStars {
+	position: absolute;
+	left: 335px;
+	top: 49px;
+	display: flex;
+	flex-direction: row;
+	width: 200px;
+	transition: 500ms;
+
+}
+
+#redStars {
+	position: absolute;
+	right: 335px;
+	top: 49px;
+	display: flex;
+	flex-direction: row-reverse;
+	width: 200px;
+	transition: 500ms;
+
+}
+
+.mapPick-13 {
+	width: 17px;
+	height: 8px;
+	margin-right: 2px;
+	background: solid;
+}
+.mapPick-11 {
+	width: 20px;
+	height: 8px;
+	margin-right: 3px;
+	background: solid;
+}
+.mapPick-9 {
+	width: 24px;
+	height: 8px;
+	margin-right: 4px;
+	background: solid;
+}
+.currentPick {
+	height: 80px;
+	width: 5px;
+}
+
+#nextPick {
+	height: 22px;
+	width: 39px;
+	position: absolute;
+	left: 1239px;
+	bottom: 158px;
+	background: solid;
+	background-color: #DADADA;
+}
+
+#mapHistory {
+	position: absolute;
+	left: 1017px;
+	bottom: 83px;
+	display: flex;
+}
+
+#mapStats {
+	position: absolute;
+	display: flex;
+	font-size: 14px;
+	font-family: Sen-Bold;
+	bottom: 25px;
+	left: 40px;
+}
+#cs {
+	position: absolute;
+	left: 76px;
+}
+#ar {
+	position: absolute;
+	left: 127px;
+}
+#od {
+	position: absolute;
+	left: 181px;
+}
+#len {
+	position: absolute;
+	left: 278px;
+}
+#bpm {
+	position: absolute;
+	left: 375px;
+}
