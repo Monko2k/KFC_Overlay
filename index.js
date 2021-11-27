@@ -195,7 +195,7 @@ socket.onmessage = event => {
 
 
 		if (data.tourney.manager.stars.left === starsBlue + 1) {
-			maps += 'b';
+			maps += 'r';
 			togglePick();
 			loadHist();
 		}
@@ -217,7 +217,7 @@ socket.onmessage = event => {
 	}
 	if(starsRed !== data.tourney.manager.stars.right) {
 		if (data.tourney.manager.stars.right === starsRed + 1){
-			maps += 'r';
+			maps += 'b';
 			togglePick();
 			loadHist();
 		}
