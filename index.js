@@ -208,10 +208,10 @@ socket.onmessage = event => {
 
 		// this is not efficient but I don't care and it doesn't matter
 		for (let i = 1; i <= starsBlue; i++) {
-			document.getElementById("blue" + i.toString()).style.opacity = 1;
+			document.getElementById("red" + i.toString()).style.opacity = 1;
 		}
 		for (let i = starsBlue + 1; i <= firstTo; i++) {
-			document.getElementById("blue" + i.toString()).style.opacity = 0.25;
+			document.getElementById("red" + i.toString()).style.opacity = 0.25;
 		}
 		
 	}
@@ -229,10 +229,10 @@ socket.onmessage = event => {
 		starsRed = data.tourney.manager.stars.right;
 		// this is not efficient but I don't care and it doesn't matter
 		for (let i = 1; i <= starsRed; i++) {
-			document.getElementById("red" + i.toString()).style.opacity = 1;
+			document.getElementById("blue" + i.toString()).style.opacity = 1;
 		}
 		for (let i = starsRed + 1; i <= firstTo; i++) {
-			document.getElementById("red" + i.toString()).style.opacity = 0.25;
+			document.getElementById("blue" + i.toString()).style.opacity = 0.25;
 		}
 	}
 	
